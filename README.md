@@ -3,7 +3,7 @@
 This app harvests information about comic creators attending a convention and produces a [Markdown](http://daringfireball.net/projects/markdown) report.
 
 The [artists](http://www.comic-con.org/cci/cci_artalley.php) attending [Comic-Con 2011](http://www.comic-con.org/) have already been harvested in a report.
-You can view that report under [examples\comic-con-2011](http://github.com/kpshek/con-harvester/examples/comic-con-2011)
+You can view that report under [examples\comic-con-2011](https://github.com/kpshek/con-harvester/tree/master/examples/comic-con-2011)
 
 ## Setup ##
 
@@ -17,14 +17,14 @@ Con Harvester has been tested with Groovy 1.8.0 which is the latest version as o
 Con Harvester is built on top of the [Comic Vine API](http://api.comicvine.com/). As such, you will need your own API key.
 If you don't have an API key, register for free as a developer at http://api.comicvine.com/
 
-Once you have your API key, edit the API-KEY file replacing the current contents with your own API key.
+Once you have your API key, edit the [API-KEY](https://github.com/kpshek/con-harvester/blob/master/API-KEY) file replacing the current contents with your own API key.
 
 ### List of Comic Creators ###
 
 The list of comic creators harvested must be provided as a plain text file named person.txt.
 This file should have a single comic creator per line.
 
-See [examples\comic-con-2011\people.txt](http://github.com/kpshek/con-harvester/examples/comic-con-2011/people.txt) as an example.
+See [examples\comic-con-2011\people.txt](https://github.com/kpshek/con-harvester/blob/master/examples/comic-con-2011/people.txt) as an example.
 
 ## Running ##
 
