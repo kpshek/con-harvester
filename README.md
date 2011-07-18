@@ -43,6 +43,14 @@ You can also view the usage help via:
 
     $ groovy -cp . harvester -help
 
+## Future ##
+
+Here are things I'd like to improve:
+
+* Tighten up the report so instead of one issue per line, it rolls up all issues in a volume to something like _Uncanny X-Men #304,305,306,500_
+* Show the volume start year to help distinguish between series reboots (eg, _X-Men (1991)_ vs _X-Men (2010)_)
+* Harvest the data into a semantic format and then generate the report from it, allowing custom reports to be easily created/run without having to re-harvest the data
+
 ## License ##
 
 Copyright 2011 Kevin Shekleton
