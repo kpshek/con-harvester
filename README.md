@@ -2,6 +2,10 @@
 
 This app harvests information about comic creators attending a convention and produces a [Markdown](http://daringfireball.net/projects/markdown) report.
 
+This report can be used to quickly find comic creators that you are interested in. For instance, you may be interested in finding any artist that has been
+involved in the creation of X-Men comics so that you can get an [X-Men sketch on your blank cover comic](http://yfrog.com/z/h3614svj) or grep the report
+to see what comic books you should bring to the convention to get signed.
+
 The [artists](http://www.comic-con.org/cci/cci_artalley.php) attending [Comic-Con 2011](http://www.comic-con.org/) have already been harvested in a report.
 You can view that report under [examples\comic-con-2011](https://github.com/kpshek/con-harvester/tree/master/examples/comic-con-2011)
 
