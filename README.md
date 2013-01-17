@@ -14,7 +14,7 @@ You can view that report under [examples\comic-con-2012](https://github.com/kpsh
 ### Ruby ###
 
 To run Con Harvester you will need [Ruby](http://www.ruby-lang.org/) installed.
-Con Harvester has been tested with Ruby 1.9.3p194 which is the latest version as of this writing.
+Con Harvester has been tested with Ruby 1.9.3p362 which is the latest version as of this writing.
 
 ### Comic Vine API Key ###
 
