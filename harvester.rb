@@ -42,10 +42,10 @@ opt_parser = OptionParser.new do |opt|
 
   opt.separator ''
   opt.separator 'Example:'
-  opt.separator 'harvester --dir comic-con-2012 --title "Comic-Con 2012'
+  opt.separator 'harvester --dir comic-con-2012 --title "Comic-Con 2012"'
   opt.separator ''
-  opt.separator 'Con Harvester will open comic-con-2011/person.txt and start harvesting information about each person,'
-  opt.separator 'generating the comic-con-2011/README.md report in the process.'
+  opt.separator 'Con Harvester will open comic-con-2012/person.txt and start harvesting information about each person,'
+  opt.separator 'generating the comic-con-2012/README.md report in the process.'
   opt.separator ''
 end
 
