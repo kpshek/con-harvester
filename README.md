@@ -6,8 +6,8 @@ This report can be used to quickly find comic creators that you are interested i
 involved in the creation of X-Men comics so that you can get an [X-Men sketch on your blank cover comic](http://yfrog.com/z/h3614svj) or grep the report
 to see what comic books you should bring to the convention to get signed.
 
-The [artists](http://www.comic-con.org/cci/cci_artalley.php) attending [Comic-Con 2012](http://www.comic-con.org/) have already been harvested in a report.
-You can view that report under [examples\comic-con-2012](https://github.com/kpshek/con-harvester/tree/master/examples/comic-con-2012)
+The [artists](http://www.comic-con.org/cci/cci_artalley.php) attending [Comic-Con 2013](http://www.comic-con.org/) have already been harvested in a report.
+You can view that report under [examples\comic-con-2013](https://github.com/kpshek/con-harvester/tree/master/examples/comic-con-2013)
 
 ## Setup ##
 
@@ -28,15 +28,15 @@ Once you have your API key, edit the [API-KEY](https://github.com/kpshek/con-har
 The list of comic creators harvested must be provided as a plain text file named person.txt.
 This file should have a single comic creator per line.
 
-See [examples\comic-con-2012\people.txt](https://github.com/kpshek/con-harvester/blob/master/examples/comic-con-2012/people.txt) as an example.
+See [examples\comic-con-2013\people.txt](https://github.com/kpshek/con-harvester/blob/master/examples/comic-con-2013/people.txt) as an example.
 
 ## Running ##
 
 To run Con Harvester, simply open a terminal session in the root directory and execute the following command:
 
-    $ ./harvester --dir comic-con-2012 --title "Comic-Con 2012"
+    $ ./harvester --dir comic-con-2013 --title "Comic-Con 2013"
 
-Where comic-con-2012 is an existing directory containing a file name people.txt containing the names of the comic creators, one per line.
+Where comic-con-2013 is an existing directory containing a file name people.txt containing the names of the comic creators, one per line.
 This directory will also be used to write a Markdown report named README.md.
 
 You can also view the usage help via:
@@ -51,7 +51,7 @@ Here are things I'd like to improve:
 
 ## License ##
 
-Copyright 2012 Kevin Shekleton
+Copyright 2013 Kevin Shekleton
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

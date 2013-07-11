@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-# Copyright 2012 Kevin Shekleton
+# Copyright 2013 Kevin Shekleton
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
@@ -42,10 +42,10 @@ opt_parser = OptionParser.new do |opt|
 
   opt.separator ''
   opt.separator 'Example:'
-  opt.separator 'harvester --dir comic-con-2012 --title "Comic-Con 2012"'
+  opt.separator 'harvester --dir comic-con-2013 --title "Comic-Con 2013"'
   opt.separator ''
-  opt.separator 'Con Harvester will open comic-con-2012/person.txt and start harvesting information about each person,'
-  opt.separator 'generating the comic-con-2012/README.md report in the process.'
+  opt.separator 'Con Harvester will open comic-con-2013/person.txt and start harvesting information about each person,'
+  opt.separator 'generating the comic-con-2013/README.md report in the process.'
   opt.separator ''
 end
 
