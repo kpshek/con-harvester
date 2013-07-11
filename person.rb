@@ -16,7 +16,7 @@ require 'open-uri'
 
 # Representation of a Person and the comic issues they played a role in creating.
 #
-# See http://api.comicvine.com/documentation/#person
+# See http://www.comicvine.com/api/documentation#toc-0-18
 class Person
 
   # Searches for a particular person by the given name
@@ -27,7 +27,7 @@ class Person
   def self.find(name)
     puts "Searching for #{name}"
 
-    url = 'http://api.comicvine.com/search/'.sign.accept_json.return_fields :name, :api_detail_url, :deck
+    url = 'http://www.comicvine.com/api/search/'.sign.accept_json.return_fields :name, :api_detail_url, :deck
     url = "#{url}&resources=person&query=#{URI::encode(name)}"
 
     json = Utils.execute_get url
@@ -66,12 +66,13 @@ class Person
   end
 
   def initialize(url)
-    url = url.sign.accept_json.return_fields :name, :issue_credits, :deck, :site_detail_url, :image
+    url = url.sign.accept_json.return_fields :name, :issues, :deck, :site_detail_url, :image, :id
     json = Utils.execute_get url
 
     @name = json['results']['name']
     @site_url = json['results']['site_detail_url']
     @deck = json['results']['deck']
+    @id = json['results']['id']
 
     if json['results']['image']
       @image_url = json['results']['image']['icon_url']
@@ -83,9 +84,8 @@ class Person
   def set_issues(json)
     @volumes = Hash.new
 
-    json['issue_credits'].each do |issue|
-      roles = issue['roles'].collect { |role| role['role'] }
-      new_issue = Issue.new(issue['api_detail_url'], roles)
+    json['issues'].each do |issue|
+      new_issue = Issue.new(issue['api_detail_url'], @id)
 
       volume = @volumes[new_issue.volume_url]
       unless volume
@@ -93,7 +93,7 @@ class Person
         @volumes[new_issue.volume_url] = volume
       end
 
-      volume.add_issue new_issue, roles
+      volume.add_issue new_issue, new_issue.roles
     end
   end
 

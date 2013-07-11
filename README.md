@@ -18,8 +18,8 @@ Con Harvester has been tested with Ruby 1.9.3p362 which is the latest version as
 
 ### Comic Vine API Key ###
 
-Con Harvester is built on top of the [Comic Vine API](http://api.comicvine.com/). As such, you will need your own API key.
-If you don't have an API key, register for free as a developer at [http://api.comicvine.com/](http://api.comicvine.com/)
+Con Harvester is built on top of the [Comic Vine API](http://www.comicvine.com/api/). As such, you will need your own API key.
+If you don't have an API key, register for free as a developer at [http://www.comicvine.com/api/](http://www.comicvine.com/api/)
 
 Once you have your API key, edit the [API-KEY](https://github.com/kpshek/con-harvester/blob/master/API-KEY) file replacing the current contents with your own API key.
 

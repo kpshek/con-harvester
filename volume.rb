@@ -19,7 +19,7 @@ require 'set'
 #
 # For example, 'X-Men (1963)' and 'X-Men (1991)' are both volumes.
 #
-# See http://api.comicvine.com/documentation/#issue
+# See http://www.comicvine.com/api/documentation#toc-0-8
 class Volume
   attr_reader :name, :issues, :roles
 

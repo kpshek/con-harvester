@@ -59,7 +59,7 @@ if not missing.empty?
   exit
 end
 
-url = 'http://api.comicvine.com/search/'.sign.accept_json.return_fields :name, :api_detail_url, :deck
+url = 'http://www.comicvine.com/api/search/'.sign.accept_json.return_fields :name, :api_detail_url, :deck
 url = "#{url}&resources=person&query=ron%20lim"
 
 Utils.execute_get url

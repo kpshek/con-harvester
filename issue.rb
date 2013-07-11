@@ -15,13 +15,13 @@
 # Note that this issue is specific to a Person (as it contains information on
 # the roles the Person played in the creation of this issue).
 #
-# See http://api.comicvine.com/documentation/#issue
+# See http://www.comicvine.com/api/documentation#toc-0-9
 class Issue
-  attr_reader :volume, :volume_url, :number
+  attr_reader :volume, :volume_url, :number, :roles
 
-  def initialize(url, roles)
+  def initialize(url, person_id)
     @roles = roles
-    url = url.sign.accept_json.return_fields :issue_number, :volume_credits
+    url = url.sign.accept_json.return_fields :issue_number, :person_credits, :volume
     json = Utils.execute_get url
 
     issue = json['results']
@@ -30,6 +30,15 @@ class Issue
     @volume = issue['volume']['name'].strip
     @volume_url = issue['volume']['api_detail_url']
     @number = issue_number ? issue['issue_number'].to_i : -100
+
+    @roles = []
+    issue['person_credits'].each do |person|
+      if person_id == person['id']
+        person['role'].split(',').each do |role|
+          @roles << role.strip
+        end
+      end
+    end
   end
 
   def to_s

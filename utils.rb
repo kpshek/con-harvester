@@ -22,7 +22,7 @@ class Utils
     raise <<-eos
       No API key is defined.
       You must define your Comic Vine API key in the file API-KEY.
-      If you don't have an API key, head on over to http://api.comicvine.com/ and register as a developer.
+      If you don't have an API key, head on over to http://www.comicvine.com/api/ and register as a developer.
     eos
   end
 
@@ -34,7 +34,7 @@ class Utils
   #
   # url - The URL to execute (cannot be nil).
   #
-  # See http://api.comicvine.com/documentation/#handling_responses
+  # See http://www.comicvine.com/api/documentation#toc-0-0
   #
   # Returns the non-nil JSON response if the GET request was successfull; nil otherwise.
   def self.execute_get(url)
@@ -52,7 +52,7 @@ end
 class String
   # Signs the given URL with the configured API key.
   # Examples:
-  #   'http://api.comicvine.com/search/'.sign
+  #   'http://www.comicvine.com/api/search/'.sign
   #
   # Returns the signed URL String.
   def sign
@@ -61,7 +61,7 @@ class String
 
   # Adds the format filter to the URL denoting that the JSON Content-Type is desired.
   # Examples:
-  #   'http://api.comicvine.com/search/'.sign.accept_json
+  #   'http://www.comicvine.com/api/search/'.sign.accept_json
   #
   # Returns the modified URL String.
   def accept_json
@@ -70,8 +70,8 @@ class String
 
   # Adds the field_list filter to the URL with the given fields.
   # Examples:
-  #   'http://api.comicvine.com/search/'.sign.return_fields :name
-  #   'http://api.comicvine.com/search/'.sign.return_fields :name, :api_detail_url
+  #   'http://www.comicvine.com/api/search/'.sign.return_fields :name
+  #   'http://www.comicvine.com/api/search/'.sign.return_fields :name, :api_detail_url
   #
   # fields - A vararg list of fields that should be returned (cannot be nil)
   #
